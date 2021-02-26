@@ -11,7 +11,6 @@ body {
 
 
 .container {
-  max-width: 1100px;
   overflow: auto;
   margin: 0;
   padding: 0;
@@ -30,30 +29,28 @@ header {
 
 header h1 {
   font-size: 60px;
-  margin-top: 210px;
+  margin: 324px 0;
   text-align: center;
 }
 
 section {
-  margin-top: 170px;
   width: 100%;
   text-align: center;  
   background: #0f479a;
 }
 
-.counters {
+.counters  {
   color: #fff;
   padding: 40px 20px;
   border-top: 3px lightskyblue solid;
+  position: absolute;
 }
 
 .counters .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
-  margin-top: 70px;
-  margin-left: 150px;
-  padding-left: 0;
+  margin: 0 auto;
   gap: 40px;
 }
 
@@ -67,14 +64,93 @@ section {
   margin: 0;
 }
 
-@media(max-width: 700px) {
-  .counters .container {
-    grid-template-columns: repeat(2, 1fr);
+@media(min-width: 1200px) {
+  header h1 {
+    font-size: 65px;
+    margin: 328px 0;
   }
-.counters .container > div:nth-of-type(1),
-	.counters .container > div:nth-of-type(2) {
-		border-bottom: 1px lightskyblue solid;
-		padding-bottom: 20px;
-	}
+  .counters .counter {
+    font-size: 60px;
+  }
+  .counters .container {
+    font-size: 20px;
+  }
+  .counters {
+    padding: 40px 0;
+  }
 }
 
+@media(min-width: 992px) and (max-width: 1199px) {
+  header h1 {
+    font-size: 55px;
+    margin: 197px 0;
+  }
+  .counters .counter {
+    font-size: 57px;
+  }
+  .counters {
+    padding: 40px 0;
+  }   
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  header h1 {
+    font-size: 52px;
+    margin: 211px 0;
+  }
+  .counters .counter {
+    font-size: 50px;
+  }
+  .counters {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 50px;
+    margin: 225px 0;
+  }
+  .counters .counter {
+    font-size: 47px;
+  }
+  .counters {
+    padding: 20px 0;
+  }
+
+}
+
+@media  (max-width: 576px) {
+  header h1 {
+    font-size: 40px;
+    margin: 118px 0;
+  }
+  .counters .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  .counters .counter {
+    font-size: 35px;
+  }
+  .counters {
+    padding: 30px 0px;
+  }
+}
+
+@media (max-width: 320px) {
+   header h1 {
+    font-size: 35px;
+    text-align: center;
+    margin: 140px 0;
+  }
+  .counters .container {
+    font-size: 16px;
+}
+
+ 
+
+}
